@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCn8_bPlh51dx2FEEV1ZTdEPsZrN_HAj1c",
+            authDomain: "fir-test-cb56d.firebaseapp.com",
+            databaseURL: "https://fir-test-cb56d.firebaseio.com",
+            projectId: "fir-test-cb56d",
+            storageBucket: "fir-test-cb56d.appspot.com",
+            messagingSenderId: "342935291469"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        console.log(firebase.database().ref('/users/01').once('value'))
+    </script>
+</body>
+</html>
